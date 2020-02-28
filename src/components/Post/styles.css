@@ -1,7 +1,13 @@
 img.avatar{
+    min-height: 64px;
+    min-width: 64px;
     height: 64px;
-    border-radius: 20px;
+    width: 64px;
+    border-radius: 50%;
 }
 .post{
     margin-left: 25px;
+}
+div .post-header{
+    margin-top: 20px;
 }
