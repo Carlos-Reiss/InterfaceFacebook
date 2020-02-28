@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+header{
+    background-color: #3b5998 ;
+    color: white;
+    padding: 10px;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 44px;
+    padding: 0 42px;
+    color: #fff;
+    min-width: 1460px;
+    font-size: 16px;
+}
+
+header div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 120px;
+}
