@@ -2,27 +2,33 @@ import React, { Component } from "react";
 import "./styles.css";
 
 function Post(props) {
-  const { author, date, comments } = props;
+  const { author, date, comments, content } = props;
+    
   return (
     <div className="post">
-      <PostHeader author={author} date={date} />
-      <PostComment comments={comments} />
+      <PostHeader author={author} date={date} content={content} />
+      <PostComment comments={comments} author={author}/>
     </div>
   );
 }
 
-function PostHeader({ author, date }) {
+function PostHeader({ author, date, content}) {
   return (
+    <>
     <div className="post-header">
       <img className="avatar" src={author.avatar} />
       <div className="details">
-        <span>{author.name}</span>
-        <span>{date}</span>
+        <span className="name">{author.name}</span>
+        <span className="date">{date}</span>
       </div>
     </div>
+    <div className="quest">
+    <p>{content}</p>
+    </div>
+    </>
   );
 }
-function PostComment({ comments }) {
+function PostComment({ comments, author}) {
   return (
     <div className="comments">
       <div className="details" />
@@ -35,6 +41,10 @@ function PostComment({ comments }) {
           </p>
         </div>
       ))}
+      <div className="question">
+      <img className="avatar" src={author.avatar}/>
+      <input id="write" placeholder="Escreva um comentário..." />
+      </div>
     </div>
   );
 }
